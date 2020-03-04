@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/da5281fdbd.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Comfortaa|Quicksand&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>border radius previewer</title>
+  </head>
+  <body>
+    <header>
+      <h1>
+        border radius previewer
+      </h1>
+      <p class="subtitle">set the values to get your border radius!</p>
+    </header>
+
+    <section class="container">
+      <div class="tr">
+        <input
+          type="text"
+          class="input_tr"
+          maxlength="3"
+          placeholder="0"
+          onkeydown="validate(event)"
+          oninput="radiusTr(), onChange()"
+        />
+      </div>
+      <div class="br">
+        <input
+          type="text"
+          class="input_br"
+          placeholder="0"
+          maxlength="3"
+          onkeydown="validate(event)"
+          oninput="radiusBr(), onChange()"
+        />
+      </div>
+      <div class="tl">
+        <input
+          type="text"
+          class="input_tl"
+          placeholder="0"
+          maxlength="3"
+          onkeydown="validate(event)"
+          oninput="radiusTl(), onChange();"
+        />
+      </div>
+      <div class="bl">
+        <input
+          type="text"
+          class="input_bl"
+          placeholder="0"
+          maxlength="3"
+          onkeydown="validate(event)"
+          oninput="radiusBl(), onChange()"
+        />
+      </div>
+      <div class="box" style="border-radius: 0px 0px 0px 0px"></div>
+    </section>
+
+    <section class="output">
+      <input class="output__radius" readonly />
+      <button class="copy__btn" onclick="copyText()" onmouseout="outMouse()">
+        <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+        copy
+      </button>
+    </section>
+    <footer class="footer">
+      <p>Made with ☕ by <a href="http://gisouza.com/"> Gi</a></p>
+      |
+      <a
+        href="https://github.com/gisouza-p/border-radius-previewer"
+        target="_blank"
+        ><i class="fab fa-github"></i
+      ></a>
+      |
+
+      <a href="https://www.linkedin.com/in/gisouza-p/" target="_blank"
+        ><i class="fab fa-linkedin"></i
+      ></a>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>
